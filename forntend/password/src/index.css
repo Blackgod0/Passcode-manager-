@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables for the three themes. We'll toggle a class on <html> to switch themes. */
+
+:root {
+  --bg: 255,255,255;
+  --text: 17,24,39;
+  --muted: 107,114,128;
+  --accent: 14,165,233; /* blue by default */
+  --card: 245,247,250;
+}
+
+html.theme-dark {
+  --bg: 8,15,29;
+  --text: 229,231,235;
+  --muted: 148,163,184;
+  --accent: 79,70,229; /* indigo */
+  --card: 14,20,29;
+}
+
+html.theme-professional {
+  --bg: 245,251,246;
+  --text: 6,35,18;
+  --muted: 63,85,70;
+  --accent: 16,185,129; /* green */
+  --card: 255,255,255;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+.card {
+  background-color: rgb(var(--card));
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.06);
+}
+.accent {
+  color: rgb(var(--accent));
+}
+.btn {
+  background-color: rgb(var(--accent));
+  color: white;
+}
